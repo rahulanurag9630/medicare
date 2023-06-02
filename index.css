@@ -1,0 +1,140 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+#homeimg{
+    max-height: 400px;
+    object-fit: contain;
+}
+/* medical logo css  */
+#medi_img{
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+/* login button  */
+/* #log_btn{
+    position: relative;
+    right: 10px;
+} */
+
+.mainPortion{
+    display:flex;
+    justify-content: start;
+}
+#need_help{
+    height: 5em;
+   width:33%;
+   border: 5px solid black;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+   margin-right: 1em;
+/* font-size: 2rem; */
+}
+#About_us_box{
+    /* height: 5em; */
+    max-height: 20rem;
+    width:50%;
+    border: 5px solid rgb(189, 50, 50);
+    margin-right: 1em;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+.img{
+       
+    float: left;
+    width: 50%;
+   gap: 4px;
+   text-align: center;
+  margin-top:4px;
+
+}
+ .column {
+        float: left;
+        width: 50%;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .row {
+        display: flex;
+      }
+      
+      .column {
+        flex: 50%;
+      }
+     
+
+.column{
+  position: relative;
+  top: 3em;
+  left: 6em;
+  width:45%
+}
+#bg-img{
+  width:50%;
+}
+#motive_par{
+  
+  width: 30em;
+}
+#motive_txt{
+  width: 6em;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  color: white;
+  font-family: courgette;
+}
+#btnneedHelp{
+  position: relative;
+  top: 1em;
+  width:33%;
+}
+.happy_people{
+ 
+  width:2.6em;
+  margin: -8px;
+  border-radius: 50%;
+   height:40px ;
+}
+#Home_h_people{
+  margin: 2.5em 0em;
+
+}
+
+/* hover effect */
+.gradient-hover-effect {
+  display: flex;
+  padding: 0.875em 2em;
+  background: linear-gradient(90deg, #3f51b5, transparent) #2196f3;
+  font-family: inherit;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 1s;
+  place-content: center;
+}
+.gradient-hover-effect:hover, .gradient-hover-effect:focus {
+  background-color: #e91e63;
+  color: #fff;
+}

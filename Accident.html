@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Accidental</title>
+    <script>
+        $(document).ready(function () {
+          // Get the user's current location
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+              $("#latitude").val(position.coords.latitude);
+              $("#longitude").val(position.coords.longitude);
+            });
+          }
+        });
+    
+    
+      </script>
+    <style>
+        #zip {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Accidental Area</h1>
+        <br>
+        <p>please enter your current address</p>
+        <hr>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Name</span>
+                <input type="text" class="form-control" name="name" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+            </div><br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Number</span>
+                <input type="number" class="form-control" name="number" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+            </div><br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg">address</span>
+                <input type="text" class="form-control" name="address" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+            </div><br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Zip</span>
+                <input type="number" class="form-control" name="zip" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+            </div><br>
+            <input type="file" id="zip" name="image" required><br><br>
+            <input type="hidden" name="latitude" id="latitude">
+            <input type="hidden" name="longitude" id="longitude">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary" type="submit">Send</button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
